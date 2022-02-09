@@ -1,0 +1,63 @@
+baseURL = "https://duijvelshoff.com/"
+# [en, zh-cn, fr, ...] determines default content language
+defaultContentLanguage = "en"
+# language code
+languageCode = "en"
+title = "Nick Duijvelshoff"
+
+# Change the default theme to be use when building the site with Hugo
+theme = "LoveIt"
+
+[params]
+  version = "0.2.X"
+
+[params.header]
+  desktopMode = "fixed"
+  mobileMode = "auto"
+  [params.header.title]
+    logo = ""
+
+[params.footer]
+  enable = true
+  hugo = false
+  copyright = true
+  since = 2022
+
+[params.home]
+  [params.home.profile]
+    enable = true
+    gravatarEmail = "nick@duijvelshoff.com"
+    title = "Nick Duijvelshoff"
+    subtitle = "Enabling Awesomeness"
+    typeit = true
+    social = true
+  [params.home.posts]
+    enable = false
+
+[params.social]
+  GitHub = "nduijvelshoff"
+  Linkedin = "nduijvelshoff"
+  Twitter = "nduijvelshoff"
+  Instagram = "nduijvelshoff"
+  Medium = "@nduijvelshoff"
+  Keybase = "nduijvelshoff"
+  Spotify = "nduijvelshoff"
+
+#[menu]
+#  [[menu.main]]
+#    identifier = "home"
+#    name = "Home"
+#    url = "/"
+#    weight = 1
+#  [[menu.main]]
+#    identifier = "about"
+#    name = "About"
+#    url = "/about/"
+#    weight = 2
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
