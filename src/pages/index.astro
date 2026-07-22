@@ -16,7 +16,12 @@ const socialLinks = [
   <section class="single-profile" aria-label="Profile">
     <div class="photo-card">
       <img src={profileImageUrl} alt="Nick Duijvelshoff" class="avatar" />
-      <h1>Nick Duijvelshoff</h1>
+      <h1>
+        <span class="title-group">
+          <span class="name-text">Nick Duijvelshoff</span>
+          <span class="motto">Enabling Awesomeness since 1987</span>
+        </span>
+      </h1>
       <div class="social-links" aria-label="Social links">
         {socialLinks.map((link) => (
           <a href={link.url} target="_blank" rel="noopener noreferrer" aria-label={link.name} title={link.name}>
@@ -57,6 +62,8 @@ const socialLinks = [
     left: 0;
     right: 0;
     bottom: 52px;
+    display: grid;
+    justify-items: center;
     color: #ffffff;
     font-size: clamp(2rem, 6vw, 2.9rem);
     margin: 0;
@@ -66,6 +73,17 @@ const socialLinks = [
     z-index: 2;
   }
 
+  .title-group {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .name-text {
+    line-height: 1;
+  }
+
   .social-links {
     position: absolute;
     left: 0;
@@ -73,10 +91,24 @@ const socialLinks = [
     bottom: 9.5px;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 8px;
     flex-wrap: wrap;
     z-index: 3;
     padding: 0 12px;
+  }
+
+  .motto {
+    font-family: "Elms Sans", "Roboto", "Segoe UI", sans-serif;
+    color: #ffffff;
+    font-size: 0.3em;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    margin-bottom: 0;
+    white-space: nowrap;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    opacity: 0.95;
   }
 
   .social-links a {
