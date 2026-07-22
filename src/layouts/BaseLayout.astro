@@ -8,6 +8,8 @@ interface Props {
 }
 
 const { title, description = "Nick Duijvelshoff - Enabling Awesomeness", minimal = false } = Astro.props;
+const siteName = "Nick Duijvelshoff";
+const fullTitle = title === siteName ? siteName : `${title} | ${siteName}`;
 const pathname = Astro.url.pathname;
 
 const socialLinks = [
@@ -26,7 +28,7 @@ const socialLinks = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <title>{title} | Nick Duijvelshoff</title>
+    <title>{fullTitle}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
