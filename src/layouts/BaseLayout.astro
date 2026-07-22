@@ -60,6 +60,7 @@ const socialLinks = [
         color: var(--ink);
         background: linear-gradient(180deg, #fffdf9 0%, #fffaf2 100%);
         min-height: 100vh;
+        overflow-x: hidden;
       }
 
       a {
@@ -185,10 +186,17 @@ const socialLinks = [
       }
 
       .minimal .main {
-        min-height: calc(100vh - 56px);
+        min-height: 100svh;
+        min-height: 100dvh;
         margin-bottom: 0;
         display: grid;
         align-items: center;
+      }
+
+      .minimal .container {
+        margin: 0 auto;
+        min-height: 100svh;
+        min-height: 100dvh;
       }
 
       .footer {
@@ -242,6 +250,10 @@ const socialLinks = [
 
         .header {
           margin-bottom: 26px;
+        }
+
+        .minimal .container {
+          margin-top: 0;
         }
       }
     </style>
