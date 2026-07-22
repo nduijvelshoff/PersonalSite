@@ -63,6 +63,15 @@ const socialLinks = [
         overflow-x: hidden;
       }
 
+      body.minimal {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        min-height: 100svh;
+        min-height: 100dvh;
+        overflow: hidden;
+      }
+
       a {
         color: var(--brand);
         text-decoration: none;
@@ -186,17 +195,19 @@ const socialLinks = [
       }
 
       .minimal .main {
-        min-height: 100svh;
-        min-height: 100dvh;
+        min-height: 100%;
+        height: 100%;
         margin-bottom: 0;
         display: grid;
         align-items: center;
+        overflow: hidden;
       }
 
       .minimal .container {
         margin: 0 auto;
-        min-height: 100svh;
-        min-height: 100dvh;
+        min-height: 100%;
+        height: 100%;
+        display: grid;
       }
 
       .footer {
